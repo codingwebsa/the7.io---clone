@@ -3,11 +3,12 @@ import { MenuIcon } from "@/icons";
 import Image from "next/image";
 import Link from "next/link";
 import "./navbar.css";
+import Sidebar from "./Sidebar";
 
 const Navbar = () => {
   return (
     <>
-      <div className="h-[100px] flex items-center gap-2 border-b border-white/20 px-10">
+      <div className="relative h-[100px] flex items-center gap-2 border-b border-white/20 px-10 z-[var(--navbar-index)]">
         {/* left side */}
         <div>
           <span className="max-w-fit">
@@ -71,11 +72,7 @@ const Navbar = () => {
             </ul>
           </nav>
           {/* menu icon, only visible in small screen */}
-          <div className="flex lg:hidden">
-            <span className="cursor-pointer">
-              <MenuIcon size={30} />
-            </span>
-          </div>
+          <Sidebar />
         </div>
       </div>
     </>

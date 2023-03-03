@@ -4,4 +4,10 @@
 
 :root {
   --primary-color: #00dc93;
+  --sidebar-index: 1000;
+  --navbar-index: 999;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
