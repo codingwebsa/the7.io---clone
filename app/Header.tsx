@@ -1,10 +1,14 @@
-import Navbar from "./Navbar";
+import "./Header.css";
+import HeroSection from "./HeroSection";
 
-const Header = () => {
+const Header = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
-      <header>
-        <Navbar />
+      <header className="custom-hero relative">
+        {children}
+        <HeroSection />
+        {/* bottom gradiant effect */}
+        <div className="custom-bottom-gradiant"></div>
       </header>
     </>
   );

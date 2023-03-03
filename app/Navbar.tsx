@@ -1,5 +1,4 @@
 import { Logo } from "@/assets";
-import { MenuIcon } from "@/icons";
 import Image from "next/image";
 import Link from "next/link";
 import "./navbar.css";

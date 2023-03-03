@@ -1,0 +1,31 @@
+.custom-hero {
+  background: url(../assets/art-top-cropp.jpg);
+  /* desktop */
+  /* background-position: center top; */
+  /* background-size: 150%; */
+  /* mobile */
+  background-size: 170%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+.custom-bottom-gradiant {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 15vh;
+  width: 100%;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 23%,
+    rgba(0, 212, 255, 0) 100%
+  );
+}
+
+@media screen and (min-width: 540px) {
+  .custom-hero {
+    background-position: center top;
+    background-size: 150%;
+  }
+}

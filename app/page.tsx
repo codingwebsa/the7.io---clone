@@ -1,5 +1,14 @@
+import Header from "./Header";
+import Navbar from "./Navbar";
+
 const HomePage = () => {
-  return <div></div>;
+  return (
+    <>
+      <Header>
+        <Navbar />
+      </Header>
+    </>
+  );
 };
 
 export default HomePage;
