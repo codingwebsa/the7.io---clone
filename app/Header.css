@@ -4,8 +4,8 @@
   /* background-position: center top; */
   /* background-size: 150%; */
   /* mobile */
-  background-size: 170%;
-  background-position: bottom;
+  background-size: 200%;
+  background-position: top;
   background-repeat: no-repeat;
 }
 .custom-bottom-gradiant {
@@ -15,10 +15,10 @@
   right: 0;
   height: 15vh;
   width: 100%;
-  background: rgb(0, 0, 0);
+  background: rgb(8, 14, 16);
   background: linear-gradient(
     0deg,
-    rgba(0, 0, 0, 1) 23%,
+    rgba(8, 14, 16, 1) 27%,
     rgba(0, 212, 255, 0) 100%
   );
 }
