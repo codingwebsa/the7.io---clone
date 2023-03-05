@@ -52,12 +52,14 @@ const links = [
 const Navbar = () => {
   const [atTop, setAtTop] = useState(true);
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 80) {
-      if (atTop) setAtTop(false);
-    }
-    if (window.scrollY == 0) setAtTop(true);
-  });
+  if (typeof window !== "undefined") {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 80) {
+        if (atTop) setAtTop(false);
+      }
+      if (window.scrollY == 0) setAtTop(true);
+    });
+  }
 
   return (
     <>
