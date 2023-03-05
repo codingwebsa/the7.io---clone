@@ -7,7 +7,7 @@ import { Logo } from "@/assets";
 const HeroSection = () => {
   return (
     <>
-      <div className="h-[100vh] pb-20 flex items-center justify-center">
+      <section className="h-[100vh] pb-20 flex items-center justify-center">
         <div className="flex items-center flex-col">
           <motion.span
             initial={{ opacity: 0, y: 50 }}
@@ -41,7 +41,7 @@ const HeroSection = () => {
             <p>DIGITAL MARKETING</p>
           </motion.div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

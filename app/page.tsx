@@ -1,12 +1,18 @@
-import Header from "./Header";
-import Navbar from "./Navbar";
+import { Navbar } from "@/components";
+import DetailSection from "./DetailSection";
+import HeroSection from "./HeroSection";
+import "@/styles/Header.css";
 
 const HomePage = () => {
   return (
     <>
-      <Header>
+      <header className="custom-hero relative">
         <Navbar />
-      </Header>
+        <HeroSection />
+        {/* bottom gradiant effect */}
+        <div className="custom-bottom-gradiant"></div>
+      </header>
+      {/* <DetailSection /> */}
     </>
   );
 };

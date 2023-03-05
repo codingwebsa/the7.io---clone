@@ -63,6 +63,7 @@ const links = [
 
 const Sidebar = () => {
   const [opened, setOpened] = useState(false);
+  console.log("render");
   return (
     <>
       <div className="flex lg:hidden">
