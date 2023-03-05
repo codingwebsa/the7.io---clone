@@ -24,7 +24,7 @@ export const metadata = {
     siteName: "The7: Elementor Creative Dark",
     images: [
       {
-        url: "https://the7.vercel.app/og.png",
+        url: "https://the7.vercel.app/og.jpg",
         width: 1500,
         height: 1000,
       },
