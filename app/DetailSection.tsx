@@ -1,10 +1,7 @@
-import { DetailsCalender } from "@/assets";
-import Image from "next/image";
-
 const DetailSection = () => {
   return (
     <>
-      <section className="mt-20">
+      <section className="my-20">
         <div>
           <h2 className="text-4xl text-center mb-20 font-medium">
             The last digital agency you&rsquo;ll ever need
