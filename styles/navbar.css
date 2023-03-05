@@ -1,6 +1,6 @@
 .nav-link {
   position: relative;
-  transition: all 300ms ease-in-out forwards;
+  transition: all 300ms ease-in-out;
 }
 .nav-link::after {
   content: "";
@@ -11,8 +11,20 @@
   width: 0%;
   background: var(--primary-color);
   filter: brightness(70%);
-  transition: all 300ms ease-in-out forwards;
+  transition: all 300ms ease-in-out;
 }
 .nav-link:hover::after {
   width: 100%;
+}
+
+.nav-link.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 100%;
+  background: var(--primary-color);
+  filter: brightness(70%);
+  transition: all 300ms ease-in-out;
 }

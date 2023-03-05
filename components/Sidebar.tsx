@@ -103,7 +103,7 @@ const Sidebar = () => {
                 {links.map((link, index) => (
                   <>
                     <motion.div
-                      key={index}
+                      key={index.toString()}
                       variants={item}
                       transition={{ duration: 0.3, delay: index * 0.1 }}
                       initial="hidden"

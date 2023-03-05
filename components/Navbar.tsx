@@ -65,7 +65,7 @@ const Navbar = () => {
     <>
       <div
         className={clsx(
-          "sticky top-0 h-[100px] flex items-center gap-2 border-b border-white/20 px-10 transition-all duration-500 z-[var(--navbar-index)]",
+          "fixed top-0 w-full h-[100px] flex items-center gap-2 border-b border-white/20 px-10 transition-all duration-500 z-[var(--navbar-index)]",
           {
             "bg-ancent h-[70px]": !atTop,
           }
@@ -99,7 +99,12 @@ const Navbar = () => {
                 <>
                   <Link
                     href={link.href}
-                    className="nav-link relative font-semibold hover:text-primary transition-all duration-200"
+                    className={clsx(
+                      "nav-link relative font-medium hover:text-primary transition-all duration-200",
+                      {
+                        "active text-primary": link.activate,
+                      }
+                    )}
                   >
                     {link.text}
                   </Link>
