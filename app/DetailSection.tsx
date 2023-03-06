@@ -1,12 +1,12 @@
 const DetailSection = () => {
   return (
     <>
-      <section className="my-20">
+      <section className="my-20 mx-2">
         <div>
-          <h2 className="text-4xl text-center mb-20 font-medium">
+          <h2 className="text-3xl sm:text-4xl text-center mb-12 sm:mb-20 font-medium">
             The last digital agency you&rsquo;ll ever need
           </h2>
-          <p className="max-w-4xl mx-auto text-center text-xl text-[#a1a4a5] leading-relaxed mb-16">
+          <p className="max-w-4xl mx-auto text-center text-lg sm:text-xl text-[#a1a4a5] leading-relaxed mb-16">
             Suspendisse ut magna porttitor, sollicitudin ligula at, molestie
             dolor. Vivamus a ligula ut velit placerat egestas at id leo. Nulla
             ac volutpat nunc. Nulla facilisi. Pellentesque tempus tellusut magna

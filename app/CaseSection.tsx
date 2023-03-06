@@ -1,49 +1,57 @@
-import {
-  BrandingAndServices,
-  DigitalMarketing,
-  Ecommerce,
-  WebDev,
-} from "@/assets";
+import { Case1, Case2, Case3, Case4, Case5, Case6 } from "@/assets";
 import Image from "next/image";
 import Link from "next/link";
+import React from "react";
 
 const cards = [
   {
-    img: WebDev,
-    text: "Web Design & Development",
+    img: Case1,
+    text: "Neon Lights",
+    subtitle: "DIGITAL MARKETING",
     href: "/",
   },
   {
-    img: DigitalMarketing,
-    text: "Digital Marketing",
+    img: Case2,
+    text: "Futuristic Furniture",
+    subtitle: "WEBSITES",
     href: "/",
   },
   {
-    img: Ecommerce,
-    text: "E-Commerce",
+    img: Case3,
+    text: "Smart Living",
+    subtitle: "WEBSITES",
     href: "/",
   },
   {
-    img: BrandingAndServices,
-    text: "Branding & Creative Services",
+    img: Case4,
+    text: "Light Painting",
+    subtitle: "BRANDING",
+    href: "/",
+  },
+  {
+    img: Case5,
+    text: "Ideabox",
+    subtitle: "BRANDING",
+    href: "/",
+  },
+  {
+    img: Case6,
+    text: "VR Experience",
+    subtitle: "WEBSITES",
     href: "/",
   },
 ];
-const ExperienceSection = () => {
+
+const CaseSection = () => {
   return (
     <>
       <section className="my-40 mx-3">
         <div>
           <h2 className="text-center text-3xl sm:text-4xl mb-12 sm:mb-16">
-            Our expertise
+            Selected cases
           </h2>
-          <p className="max-w-4xl mx-auto text-center text-lg sm:text-xl text-[#a1a4a5] leading-relaxed mb-16">
-            Vivamus a ligula ut velit placerat egestas at id leo. Nulla ac
-            volutpat nunc. Suspendisse ut magna porttitor, sollicitudin ligula
-            at, molestie dolor.
-          </p>
           {/* cards */}
-          <div className="grid mx-10 gap-12 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid mx-10 gap-12 sm:grid-cols-2 lg:grid-cols-3">
             {cards.map((card) => (
               <>
                 <Link href={card.href}>
@@ -58,10 +66,10 @@ const ExperienceSection = () => {
                     {card.text}
                   </p>
                   <button
-                    className="uppercase text-sm tracking-widest font-medium text-purple-600 hover:text-purple-400 transition-colors duration-300"
+                    className="uppercase text-sm tracking-widest font-medium text-stone-500"
                     type="button"
                   >
-                    Learn More <span className="text-lg">&#8594;</span>
+                    {card.subtitle}
                   </button>
                 </Link>
               </>
@@ -73,8 +81,4 @@ const ExperienceSection = () => {
   );
 };
 
-export default ExperienceSection;
-
-const Card = () => {
-  return <></>;
-};
+export default CaseSection;

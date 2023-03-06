@@ -52,7 +52,6 @@ export default function RootLayout({
         className={`bg-ancent text-white pb-64 ${sora.variable} font-sora overflow-x-hidden`}
       >
         <Navbar />
-
         <main>{children}</main>
       </body>
     </html>
