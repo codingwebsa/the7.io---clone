@@ -1,6 +1,6 @@
 import "./globals.css";
 import { Sora } from "next/font/google";
-import { Navbar } from "@/components";
+import { Footer, Navbar } from "@/components";
 
 const sora = Sora({
   subsets: ["latin"],
@@ -49,10 +49,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`bg-ancent text-white pb-64 ${sora.variable} font-sora overflow-x-hidden`}
+        className={`bg-ancent text-white ${sora.variable} font-sora overflow-x-hidden`}
       >
         <Navbar />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

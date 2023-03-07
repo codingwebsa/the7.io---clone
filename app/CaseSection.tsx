@@ -58,6 +58,8 @@ const CaseSection = () => {
                   <div className="mb-10">
                     <Image
                       className="aspect-square object-cover rounded-tl-[2rem] rounded-br-[2rem] hover:saturate-50 hover:brightness-125 hover:contrast-125 transition-all duration-500"
+                      width={720}
+                      height={720}
                       src={card.img}
                       alt=""
                     />

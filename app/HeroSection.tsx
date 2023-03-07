@@ -7,8 +7,8 @@ import { Logo } from "@/assets";
 const HeroSection = () => {
   return (
     <>
-      <header className="custom-hero relative pt-24">
-        <section className="h-[100vh] pb-20 flex items-center justify-center">
+      <header className="custom-hero relative">
+        <section className="h-[100vh] md:pb-20 pt-24 flex items-center justify-center">
           <div className="flex items-center flex-col">
             <motion.span
               initial={{ opacity: 0, y: 50 }}

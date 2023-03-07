@@ -15,6 +15,10 @@ import Case3 from "./3d020.jpg";
 import Case4 from "./3d027.jpg";
 import Case5 from "./3d019.jpg";
 import Case6 from "./cr731.jpg";
+import Article1 from "./article1.jpg";
+import Article2 from "./article2.jpg";
+import Article3 from "./article3.jpg";
+import Article4 from "./article4.jpg";
 
 export {
   Logo,
@@ -34,4 +38,8 @@ export {
   Case4,
   Case5,
   Case6,
+  Article1,
+  Article2,
+  Article3,
+  Article4,
 };
