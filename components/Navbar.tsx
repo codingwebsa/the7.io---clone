@@ -6,51 +6,45 @@ import Link from "next/link";
 import "@/styles/navbar.css";
 import Sidebar from "./Sidebar";
 import clsx from "clsx";
-import { useMemo, useState } from "react";
+import { useState } from "react";
 
 const links = [
   {
     text: "Home",
-    href: "/",
-    activate: true,
+    href: "#heroSection",
   },
   {
     text: "Agency",
-    href: "/",
-    activate: false,
+    href: "#detailsSec",
   },
   {
     text: "Team",
-    href: "/",
-    activate: false,
+    href: "#sponserSection",
   },
   {
     text: "Services",
-    href: "/",
-    activate: false,
+    href: "#expertiesSection",
     hasSublinks: true,
   },
   {
     text: "Showcase",
-    href: "/",
-    activate: false,
+    href: "#casesSection",
     hasSublinks: true,
   },
   {
     text: "Blog",
-    href: "/",
-    activate: false,
+    href: "#blogSection",
     hasSublinks: true,
   },
   {
     text: "Contact",
-    href: "/",
-    activate: false,
+    href: "#footerSection",
   },
 ];
 
 const Navbar = () => {
   const [atTop, setAtTop] = useState(true);
+  const [active, setActive] = useState("Home");
 
   if (typeof window !== "undefined") {
     window.addEventListener("scroll", () => {
@@ -60,7 +54,6 @@ const Navbar = () => {
       if (window.scrollY == 0) setAtTop(true);
     });
   }
-
   return (
     <>
       <div
@@ -73,7 +66,7 @@ const Navbar = () => {
       >
         {/* left side */}
         <div>
-          <span className="max-w-fit">
+          <Link href="/" className="max-w-fit">
             <Image
               src={Logo}
               className={clsx(
@@ -84,7 +77,7 @@ const Navbar = () => {
               )}
               alt="The7 Logo"
             />
-          </span>
+          </Link>
         </div>
         {/* right side */}
         <div className="flex-1 justify-end flex">
@@ -97,17 +90,18 @@ const Navbar = () => {
             >
               {links.map((link) => (
                 <>
-                  <Link
+                  <a
                     href={link.href}
+                    onClick={() => setActive(link.text)}
                     className={clsx(
                       "nav-link relative font-medium hover:text-primary transition-all duration-200",
                       {
-                        "active text-primary": link.activate,
+                        "active text-primary": link.text === active,
                       }
                     )}
                   >
                     {link.text}
-                  </Link>
+                  </a>
                 </>
               ))}
 
@@ -124,12 +118,7 @@ const Navbar = () => {
             </ul>
           </nav>
           {/* menu icon, only visible in small screen */}
-          {useMemo(
-            () => (
-              <Sidebar />
-            ),
-            []
-          )}
+          <Sidebar active={active} />
         </div>
       </div>
     </>

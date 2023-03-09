@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <>
-      <footer>
+      <footer id="footerSection">
         <section className="py-10 sm:pt-16 lg:pt-24">
           <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
             <div className="grid grid-cols-2 md:col-span-3 lg:grid-cols-6 gap-y-16 gap-x-12">
@@ -226,7 +226,8 @@ const Footer = () => {
             <hr className="mt-16 mb-10 border-gray-200" />
 
             <p className="text-sm text-center text-gray-600">
-              © Copyright 2021, All Rights Reserved by Postcraft
+              © Copyright 2021, All Rights Reserved by{"  "}
+              <b className="text-white/80"> Codingwebsa</b>
             </p>
           </div>
         </section>

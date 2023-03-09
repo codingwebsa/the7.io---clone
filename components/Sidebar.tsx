@@ -23,47 +23,40 @@ const item = {
 const links = [
   {
     text: "Home",
-    href: "/",
-    activate: true,
+    href: "#heroSection",
   },
   {
     text: "Agency",
-    href: "/",
-    activate: false,
+    href: "#detailsSec",
   },
   {
     text: "Team",
-    href: "/",
-    activate: false,
+    href: "#sponserSection",
   },
   {
     text: "Services",
-    href: "/",
-    activate: false,
+    href: "#expertiesSection",
     hasSublinks: true,
   },
   {
     text: "Showcase",
-    href: "/",
-    activate: false,
+    href: "#casesSection",
     hasSublinks: true,
   },
   {
     text: "Blog",
-    href: "/",
-    activate: false,
+    href: "#blogSection",
     hasSublinks: true,
   },
   {
     text: "Contact",
-    href: "/",
-    activate: false,
+    href: "#footerSection",
   },
 ];
 
-const Sidebar = () => {
+const Sidebar = ({ active }: any) => {
   const [opened, setOpened] = useState(false);
-  console.log("render");
+
   return (
     <>
       <div className="flex lg:hidden">
@@ -109,10 +102,11 @@ const Sidebar = () => {
                       initial="hidden"
                       animate="visible"
                     >
-                      <Link
+                      <a
                         href={link.href}
+                        onClick={() => setOpened(false)}
                         className={clsx("flex items-center gap-2", {
-                          "text-primary": link.activate,
+                          "text-primary": link.text === active,
                         })}
                       >
                         {link.text}{" "}
@@ -121,7 +115,7 @@ const Sidebar = () => {
                             +
                           </span>
                         )}
-                      </Link>
+                      </a>
                     </motion.div>
                   </>
                 ))}

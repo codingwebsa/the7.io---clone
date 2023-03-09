@@ -32,7 +32,7 @@ const cards = [
 const LatestArticales = () => {
   return (
     <>
-      <section>
+      <section id="blogSection">
         <h2 className="text-center text-3xl sm:text-4xl mb-12 sm:mb-16">
           Latest news & articles
         </h2>

@@ -1,7 +1,9 @@
+"use client";
+
 const DetailSection = () => {
   return (
     <>
-      <section className="md:my-20 mx-2">
+      <section id="detailsSec" className="md:my-20 mx-2">
         <div>
           <h2 className="text-3xl sm:text-4xl text-center mb-12 sm:mb-20 font-medium">
             The last digital agency you&rsquo;ll ever need

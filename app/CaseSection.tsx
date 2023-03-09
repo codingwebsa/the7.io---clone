@@ -45,7 +45,7 @@ const cards = [
 const CaseSection = () => {
   return (
     <>
-      <section className="my-40 mx-3">
+      <section id="casesSection" className="my-40 mx-3">
         <div>
           <h2 className="text-center text-3xl sm:text-4xl mb-12 sm:mb-16">
             Selected cases

@@ -14,7 +14,7 @@ export default SponserSection;
 
 function LogoCloud() {
   return (
-    <div className="py-24 sm:py-32">
+    <section id="sponserSection" className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <h2 className="text-center text-lg tracking-widest leading-8 text-primary mb-20">
           WE ARE PROUD TO WORK WITH THESE COMPANIES
@@ -57,6 +57,6 @@ function LogoCloud() {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 }

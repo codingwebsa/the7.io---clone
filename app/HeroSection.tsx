@@ -7,7 +7,7 @@ import { Logo } from "@/assets";
 const HeroSection = () => {
   return (
     <>
-      <header className="custom-hero relative">
+      <header id="heroSection" className="custom-hero relative">
         <section className="h-[100vh] md:pb-20 pt-24 flex items-center justify-center">
           <div className="flex items-center flex-col">
             <motion.span
